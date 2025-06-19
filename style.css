@@ -1,57 +1,68 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0b0b0b;
-  color: #fbe8d3;
+  font-family: 'Segoe UI', 'Open Sans', sans-serif;
+  background: #ffffff;
+  color: #111111;
+  line-height: 1.6;
 }
 
 header.hero {
-  background: #0b0b0b;
-  color: #2ed3c9;
+  background: #111111;
+  color: #f9cbb2;
   text-align: center;
   padding: 60px 20px;
 }
 
+header.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header.hero p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
 .cta-button {
-  background: #2ed3c9;
-  color: #0b0b0b;
-  padding: 12px 24px;
-  border: none;
+  background: #f9cbb2;
+  color: #111111;
+  padding: 10px 22px;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  margin-top: 20px;
   display: inline-block;
-  margin-top: 10px;
 }
 
 .navbar {
-  background: #1e1e1e;
-  text-align: center;
+  background: #ffffff;
+  border-bottom: 1px solid #ccc;
   padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar a {
-  color: #fbe8d3;
   text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  color: #2ed3c9;
+  color: #111111;
+  font-weight: 600;
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
   text-align: center;
 }
 
@@ -59,47 +70,68 @@ header.hero {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
+  margin-top: 30px;
 }
 
 .card {
-  background: #1a1a1a;
+  background: #f9f9f9;
+  border: 1px solid #eee;
   border-radius: 10px;
   padding: 20px;
   width: 280px;
-  color: #fbe8d3;
   text-align: left;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 .card h3 {
-  color: #2ed3c9;
+  font-size: 1.2rem;
+  color: #111111;
+  margin-bottom: 10px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 80%;
+  width: 90%;
   padding: 10px;
   margin: 10px 0;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .contact-form button {
-  background-color: #2ed3c9;
-  border: none;
+  background: #f9cbb2;
+  color: #111111;
   padding: 10px 20px;
+  border: none;
   font-weight: bold;
-  color: #0b0b0b;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 footer {
-  background: #1e1e1e;
+  background: #111111;
+  color: #f9cbb2;
   text-align: center;
   padding: 20px;
-  font-size: 0.9em;
-  color: #aaa;
+  font-size: 0.9rem;
+}
+
+#search-bar {
+  margin: 20px auto;
+  text-align: center;
+}
+
+#search-bar input {
+  padding: 10px;
+  width: 300px;
+  max-width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -108,26 +140,25 @@ footer {
     align-items: center;
   }
 
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .contact-form input,
   .contact-form textarea {
     width: 95%;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+  header.hero h1 {
+    font-size: 2rem;
   }
 
-  .hero-video video {
-    max-height: 240px;
-  }
-
-  header.hero {
-    padding: 40px 10px;
+  header.hero p {
+    font-size: 1rem;
   }
 
   .cta-button {
-    font-size: 1em;
-    padding: 10px 20px;
+    font-size: 1rem;
   }
 }
